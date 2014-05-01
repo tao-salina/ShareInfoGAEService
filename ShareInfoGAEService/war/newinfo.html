@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+
+    <form action="/saveinfo" method="post">
+        Title: <input type="text" value="" id="title" name="title"/><br>
+        Category: <select id="category" name="category" >
+        <option value="House" >House</option>
+        <option value="Car">Car</option>
+        <option value="Other">Other</option>
+        </select><br>
+        Type: <select id="type" name="type" >
+        <option value="Offered">Offered</option>
+        <option value="Wanted">Wanted</option>
+        </select><br>
+        Email: <input type="text" value="" id="email" name="email" /><br>
+        Description: <br>
+        <textarea name="description" rows="3" cols="60"></textarea><br>
+        <input type="submit" value="Post Info" />
+    </form>
+
+  </body>
+</html>

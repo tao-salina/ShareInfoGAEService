@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<init-param>
+		<param-name>allowGetForSafariButMakeForgeryEasier</param-name>
+		<param-value>true</param-value>
+	</init-param>
+	<init-param>
+		<param-name>crossDomainSessionSecurity</param-name>
+		<param-value>false</param-value>
+	</init-param>
+	<init-param>
+		<param-name>allowScriptTagRemoting</param-name>
+		<param-value>true</param-value>
+	</init-param>
+	
+	<servlet>
+        <servlet-name>saveinfo</servlet-name>
+        <servlet-class>com.npu.shareinfo.SaveRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>saveinfo</servlet-name>
+        <url-pattern>/saveinfo</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>queryinfo</servlet-name>
+        <servlet-class>com.npu.shareinfo.QueryRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>queryinfo</servlet-name>
+        <url-pattern>/queryinfo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>deleteinfo</servlet-name>
+        <servlet-class>com.npu.shareinfo.DeleteRecordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteinfo</servlet-name>
+        <url-pattern>/deleteinfo</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
